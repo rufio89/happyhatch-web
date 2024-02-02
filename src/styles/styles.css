@@ -16,6 +16,12 @@ body {
 }
 
 /* Navigation Styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Make sure it's above other content */
+    background-color: #748477; /* Match your header's background color */
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -26,7 +32,6 @@ nav {
 
 #nav-links {
     list-style: none;
-    display: flex;
 }
 
 #nav-links li a {
@@ -42,7 +47,26 @@ nav {
     font-weight: bold;
 }
 
+.hamburger {
+    display: none; /* Hide by default */
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white; /* Set the color to match your nav */
+}
 
+/* Mobile nav menu hidden by default */
+.nav-links {
+    display: none;
+}
+
+
+.app-preview {
+    width: 840px; /* or any fixed width you prefer */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
 
 .cta-button {
     text-decoration: none;
@@ -58,7 +82,7 @@ nav {
 }
 
 #features, #hero, #about{
-    height:100vh;
+    min-height:100vh;
 }
 
 /* Features Section */
@@ -74,8 +98,9 @@ nav {
     flex-wrap: wrap; 
     justify-content: center;/* Centers the children vertically in the container */
     align-items: center;   /* Centers the children horizontally */
-    height: 100vh; 
+    min-height: 100vh; 
 }
+
 
 .feature-item {
     display: flex; /* Use flexbox */
@@ -172,6 +197,7 @@ nav {
     margin-top:.5em;
 }
 
+
 /* Footer Styles */
 footer {
     text-align: center;
@@ -180,6 +206,49 @@ footer {
     color: white;
 }
 
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .app-preview {
+        width: 60%; /* Adjust the percentage as needed for mobile devices */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+/* Display the hamburger menu on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    /* When the nav-links are shown (toggled via JS), display it as a block */
+    .nav-links.show {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: #748477; /* Match the nav bar color */
+    }
+    
+    .nav-links.show li {
+        display: block;
+        text-align: center;
+    }
+    
+    .nav-links.show li a {
+        display: block;
+        padding: 0.5em;
+    }
+}
+
+/* Larger screens display the nav inline */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+    }
+}
 
 /* Responsive Styles for Features */
 @media (max-width: 768px) {

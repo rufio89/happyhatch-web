@@ -1,0 +1,163 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Default text color */
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #748477; /* Primary color for the header */
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    color: white; /* For contrast against the background */
+}
+
+/* Logo color */
+#logo {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    padding: 4em 0;
+    background: #f5f5f5;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #748477; /* Primary color for buttons */
+    color: white;
+    padding: 1em 2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #5a6b5a; /* Darker shade for button hover */
+}
+
+/* Features Section */
+#features {
+    padding: 2em 5%;
+    background-color: #e9ecef; /* Light background for features area */
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Wrap items in smaller screens */
+}
+
+.feature-item {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 30%;
+    padding: 1em;
+    text-align: center; /* Center the text */
+}
+
+.feature-item i {
+    margin-bottom: 1em; /* Add space below the icon */
+    color: #748477; /* Use your app's primary color for the icon */
+}
+
+.feature-item img {
+    max-width: 100px;
+    margin: 0 auto;
+    background-color: #748477; /* Primary color for icon background */
+    border-radius: 50%; /* Circular background for icons */
+    padding: 1em;
+}
+
+.feature-item h3 {
+    margin-top: 1em;
+    color: #748477; /* Primary color for subtitles */
+}
+
+.feature-item p {
+    margin-top: 0.5em;
+    text-align: left;
+}
+
+
+
+/* Responsive Styles for Features */
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+    
+    .feature-item p, .feature-item h3 {
+        text-align: center;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 2em 5%;
+}
+
+/* Download Section */
+#download {
+    padding: 2em 5%;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #748477; /* Primary color for the footer */
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #nav-links {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        display: block;
+        width: 80%;
+        margin: 1em auto;
+    }
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 2em;
+    }
+}

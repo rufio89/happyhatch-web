@@ -9,6 +9,10 @@ body {
     font-family: Arial, sans-serif;
     color: #333; /* Default text color */
     line-height: 1.6;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:300;
+    font-style: normal;
 }
 
 /* Navigation Styles */
@@ -38,12 +42,7 @@ nav {
     font-weight: bold;
 }
 
-/* Hero Section Styles */
-#hero {
-    text-align: center;
-    padding: 4em 0;
-    background: #f5f5f5;
-}
+
 
 .cta-button {
     text-decoration: none;
@@ -58,50 +57,128 @@ nav {
     background-color: #5a6b5a; /* Darker shade for button hover */
 }
 
+#features, #hero, #about{
+    height:100vh;
+}
+
 /* Features Section */
 #features {
     padding: 2em 5%;
     background-color: #e9ecef; /* Light background for features area */
+    text-align: center;
 }
+
 
 .feature-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Wrap items in smaller screens */
+    flex-wrap: wrap; 
+    justify-content: center;/* Centers the children vertically in the container */
+    align-items: center;   /* Centers the children horizontally */
+    height: 100vh; 
 }
 
 .feature-item {
     display: flex; /* Use flexbox */
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
-    width: 30%;
+    width: 25%;
     padding: 1em;
     text-align: center; /* Center the text */
 }
 
 .feature-item i {
-    margin-bottom: 1em; /* Add space below the icon */
-    color: #748477; /* Use your app's primary color for the icon */
+    color: #000; /* Use your app's primary color for the icon */
 }
 
 .feature-item img {
     max-width: 100px;
     margin: 0 auto;
-    background-color: #748477; /* Primary color for icon background */
+    background-color: #000; /* Primary color for icon background */
     border-radius: 50%; /* Circular background for icons */
     padding: 1em;
 }
 
 .feature-item h3 {
     margin-top: 1em;
-    color: #748477; /* Primary color for subtitles */
+    color: #000; /* Primary color for subtitles */
 }
 
 .feature-item p {
     margin-top: 0.5em;
-    text-align: left;
+    text-align: center;
 }
 
+
+/* Hero Section Styles */
+
+#hero {
+    position: relative; /* Needed for the overlay positioning */
+    text-align: center;
+    padding: 4em 0;
+    background:#181818;
+   
+}
+
+/* Ensure text on top of the background is readable */
+#hero h2, #hero p, #hero h1, #hero img {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Download Button Styling */
+.cta-button {
+    /* Your existing styles */
+    position: relative; /* Ensure it's above the pseudo-element overlay */
+    z-index: 2;
+    /* Add more styles if needed */
+}
+
+
+/* About Section */
+#about {
+    padding: 2em 5%;
+}
+
+#about h2{
+    text-align: center;
+}
+
+#about p{
+    margin-top:1em;
+}
+
+/* Download Section */
+#download {
+    padding: 2em 5%;
+    text-align: center;
+}
+
+#download h2{
+    margin-bottom:1em;
+}
+
+/* Privacy Policy */
+#privacy-policy {
+    padding: 2em 5%;
+}
+
+#privacy-policy h2{
+    text-align: center;
+}
+
+#privacy-policy p{
+    margin-top:.5em;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #748477; /* Primary color for the footer */
+    color: white;
+}
 
 
 /* Responsive Styles for Features */
@@ -119,25 +196,6 @@ nav {
     .feature-item p, .feature-item h3 {
         text-align: center;
     }
-}
-
-/* About Section */
-#about {
-    padding: 2em 5%;
-}
-
-/* Download Section */
-#download {
-    padding: 2em 5%;
-    text-align: center;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background: #748477; /* Primary color for the footer */
-    color: white;
 }
 
 /* Responsive Styles */

@@ -210,7 +210,7 @@ footer {
 /* Responsive adjustments for mobile screens */
 @media (max-width: 768px) {
     .app-preview {
-        width: 60%; /* Adjust the percentage as needed for mobile devices */
+        width: 80%; /* Adjust the percentage as needed for mobile devices */
         height: auto; /* Maintain aspect ratio */
     }
 }
